@@ -1,0 +1,83 @@
+<!--
+title: Karotter通知＆検索
+description: Karotterの通知を設定したり、投稿を検索したりする方法
+published: true
+date: 2026-04-19T00:32:07.873Z
+tags: karotter
+editor: ckeditor
+dateCreated: 2026-04-19T00:32:06.352Z
+-->
+
+<h1>Karotter連携</h1>
+<p>Karotter連携は、Karotterにて新しい投稿がされた際に通知したり、投稿を検索したりできます。</p>
+<h3>新しい投稿がされたときに通知をする</h3>
+<p>以下は新しい投稿がされた際に通知する機能をセットアップする方法です。</p>
+<ol>
+  <li><code>/sns karotter add</code> を入力し、ユーザー名を指定してから送信する</li>
+  <li><code>/sns karotter list</code>を入力し送信します。</li>
+  <li>通知したいユーザー名が表示されていれば成功です。</li>
+</ol>
+<blockquote>
+  <p>逆に記事通知を削除する場合は、/sns karotter removeで削除できます。</p>
+</blockquote>
+<h3>コマンド一覧</h3>
+<p>以下は、Karotter連携のコマンド一覧です。</p>
+<figure class="table">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(224, 224, 224);border-right:1px solid rgb(224, 224, 224);border-top:1px solid rgb(224, 224, 224);">
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">コマンド名</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">説明</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">必要な権限</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">/sns karotter add</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">Karotterの通知を登録します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">チャンネルの管理, Webhookの管理</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">/sns karotter remove</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">Karotterの通知を削除します。</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">チャンネルの管理</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">/sns karotter list</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">登録中のKarotter通知一覧を表示します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">チャンネルの管理</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">/sns karotter message</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">通知時に使用するメッセージのテンプレートを指定します。</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">チャンネルの管理</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>メッセージに使用できる変数</h3>
+<p>以下はメッセージに使用できる変数一覧です。</p>
+<figure class="table">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(224, 224, 224);border-right:1px solid rgb(224, 224, 224);border-top:1px solid rgb(224, 224, 224);">
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">変数名</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">説明</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">例</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{name}</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">投稿した人の名前を代入します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">SharkBot</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{content}</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">内容を代入します。</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">SharkBotだよ！よろしくね！</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{url}</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">投稿のURLを入力します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">https://karotter.com/SharkBot/status/431672</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

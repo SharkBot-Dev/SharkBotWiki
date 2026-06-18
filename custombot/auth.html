@@ -1,0 +1,59 @@
+<!--
+title: カスタムBotの認証パネル
+description: カスタムBotで様々な認証パネルを作る方法
+published: true
+date: 2026-04-16T08:56:46.694Z
+tags: カスタムbot, 認証パネル
+editor: ckeditor
+dateCreated: 2026-04-16T08:53:55.706Z
+-->
+
+<h1>カスタムBotの認証パネル</h1>
+<p>カスタムBotの認証パネルでは、メンバーがロボットではないことを簡単に確認できます。</p>
+<blockquote>
+  <p>※この認証パネルはメンバーがロボットではないことを完全に保証することができません。</p>
+</blockquote>
+<h3>認証パネルを作成する</h3>
+<p>以下の手順で認証パネルを作成できます。</p>
+<ol>
+  <li>Discordで、<code>[Prefix]auth create &lt;click|math|web&gt; &lt;ロール&gt;</code>と入力し、送信します。<br>※スラッシュコマンドが有効の場合は<code>[Prefix]</code>でも、<code>/</code>でも実行できます。</li>
+  <li>パネルが送信されます。</li>
+  <li>最後にボタンを押して認証を行い、ロールが付与されれば作成完了です。</li>
+</ol>
+<h3>パネルの見た目を変更する</h3>
+<p>以下の手順で各認証のパネルの見た目を変更できます。</p>
+<ol>
+  <li>カスタムBotメーカーのダッシュボードにアクセスし、登録したBotをクリックし開く</li>
+  <li>認証設定をクリックし、変更したい認証パネルの項目を選択します。</li>
+  <li>メッセージを変更したり、埋め込みを追加後、保存を行います。</li>
+  <li>上に書いてある手順で認証パネルを作成します。</li>
+  <li>見た目が反映されていたら成功です。</li>
+</ol>
+<p>また、各認証のパネルでは以下の変数が追加で利用可能です。</p>
+<p>さらに、それ以外の変数がカスタムコマンドの変数と同じ変数が使用できます。</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">変数名</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">説明</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">例</td>
+      </tr>
+      <tr>
+        <td>{role_mention}</td>
+        <td>ロールのメンションを埋め込みます。</td>
+        <td>@メンバー</td>
+      </tr>
+      <tr>
+        <td>{role_name}</td>
+        <td>ロールの名前を埋め込みます。</td>
+        <td>メンバー</td>
+      </tr>
+      <tr>
+        <td>{role_id}</td>
+        <td>ロールのidを埋め込みます。</td>
+        <td>1335428061541437531</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

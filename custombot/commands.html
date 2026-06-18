@@ -1,0 +1,193 @@
+<!--
+title: カスタムBotのコマンド一覧
+description: カスタムBotで使える標準コマンドの説明
+published: true
+date: 2026-04-22T06:11:23.502Z
+tags: カスタムbot
+editor: ckeditor
+dateCreated: 2026-04-11T08:08:56.586Z
+-->
+
+<h1>カスタムBotのコマンド一覧</h1>
+<p>カスタムBotには、作成時に最初から搭載されるコマンドと、カスタムコマンドがあります。</p>
+<p>これらのコマンドは後からいつでも無効化できます！</p>
+<h3>コマンドの使い方</h3>
+<p>コマンドは、<code>[prefix]コマンド名</code>か、<code>/コマンド名</code>（スラッシュコマンドを有効にした場合）で実行できます。</p>
+<h3>基本コマンド</h3>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>コマンド名</td>
+        <td>説明</td>
+        <td>必要な権限</td>
+      </tr>
+      <tr>
+        <td>help</td>
+        <td>Botの使い方を表示します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>chat</td>
+        <td>Webチャットへのリンクを表示します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>test</td>
+        <td>Botがしっかり動いているかを確認します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>update</td>
+        <td>Botを最新にアップデートします。（Bot管理者専用）</td>
+        <td>Botの管理者</td>
+      </tr>
+      <tr>
+        <td>echo</td>
+        <td>Botにメッセージを発言させます。</td>
+        <td>メッセージの管理</td>
+      </tr>
+      <tr>
+        <td>ban</td>
+        <td>ユーザーをBanします。（管理者専用）</td>
+        <td>メンバーのBan</td>
+      </tr>
+      <tr>
+        <td>kick</td>
+        <td>メンバーをKickします。（管理者専用）</td>
+        <td>メンバーのKick</td>
+      </tr>
+      <tr>
+        <td>timeout</td>
+        <td>メンバーをタイムアウトします。（管理者専用）</td>
+        <td>メンバーのタイムアウト</td>
+      </tr>
+      <tr>
+        <td>automod</td>
+        <td>AutoModを設定します。（管理者専用）</td>
+        <td>サーバーの管理</td>
+      </tr>
+      <tr>
+        <td>auth</td>
+        <td>認証設定をします。（管理者専用）</td>
+        <td>ロールの管理</td>
+      </tr>
+      <tr>
+        <td>cat</td>
+        <td>ランダムな猫の画像を取得する</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>dog</td>
+        <td>ランダムな犬の画像を取得する</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>afk</td>
+        <td>AFK状態（放置状態）を設定します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>embed</td>
+        <td>作成した埋め込みを送信します。</td>
+        <td>メッセージの管理、埋め込みの送信</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>カスタムコマンドについて</h3>
+<p>カスタムコマンドは以下の手順で作成できます。</p>
+<ol>
+  <li>カスタムBotメーカーのダッシュボードにアクセスし、登録したBotをクリックし開く</li>
+  <li>カスタムコマンド設定をクリックし、「新しいカスタムコマンドを追加」をクリックする。</li>
+  <li>次に、コマンド名を入力する。</li>
+  <li>最後に、実行するアクションを設定し、保存する</li>
+  <li><code>[prefix]コマンド名 引数1 引数2 …</code>と入力し、送信してアクションが実行されれば成功です。</li>
+</ol>
+<p>また、カスタムコマンドのメッセージ＆埋め込みには以下の変数を使用することができます。</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>変数名</td>
+        <td>説明</td>
+        <td>例</td>
+      </tr>
+      <tr>
+        <td>{user}</td>
+        <td>実行したユーザー名を埋め込みます。</td>
+        <td>sametarou</td>
+      </tr>
+      <tr>
+        <td>{user_name}</td>
+        <td>上と同じです</td>
+        <td>sametarou</td>
+      </tr>
+      <tr>
+        <td>{user_display}</td>
+        <td>実行したユーザーの表示名を埋め込みます。</td>
+        <td>サメちゃん</td>
+      </tr>
+      <tr>
+        <td>{user_mention}</td>
+        <td>実行したユーザーのメンションを埋め込みます。</td>
+        <td>@サメちゃん</td>
+      </tr>
+      <tr>
+        <td>{user_id}</td>
+        <td>実行したユーザーのidを埋め込みます。</td>
+        <td>1335428061541437531</td>
+      </tr>
+      <tr>
+        <td>{guild}</td>
+        <td>実行したサーバー名を埋め込みます。</td>
+        <td>SharkBot Support</td>
+      </tr>
+      <tr>
+        <td>{guild_id}</td>
+        <td>実行したサーバーidを埋め込みます。</td>
+        <td>1343124570131009579</td>
+      </tr>
+      <tr>
+        <td>{channel}</td>
+        <td>実行したチャンネル名を埋め込みます。</td>
+        <td>コマンド</td>
+      </tr>
+      <tr>
+        <td>{channel_mention}</td>
+        <td>実行したチャンネルのメンションを埋め込みます。</td>
+        <td>#コマンド</td>
+      </tr>
+      <tr>
+        <td>{channel_id}</td>
+        <td>実行したチャンネルのidを埋め込みます。</td>
+        <td>1344549943788179497</td>
+      </tr>
+      <tr>
+        <td>{prefix}</td>
+        <td>コマンドのprefixを埋め込みます。</td>
+        <td>!.</td>
+      </tr>
+      <tr>
+        <td>{args_引数id}</td>
+        <td>引数を埋め込みます。「!.test1 こんにちは」の場合は、例のようになります。</td>
+        <td>こんにちは</td>
+      </tr>
+      <tr>
+        <td>{args_all}</td>
+        <td>すべての引数を埋め込みます。</td>
+        <td>こんにちは こんばんは</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>自動返信について</h3>
+<p>自動返信は、以下の手順で作成できます。</p>
+<ol>
+  <li>カスタムBotメーカーのダッシュボードにアクセスし、登録したBotをクリックし開く</li>
+  <li>自動返信設定をクリックし、「新しい自動返信を追加」をクリックする。</li>
+  <li>次に、反応するテキストを入力し、一致方式を入力する</li>
+  <li>最後に、実行するアクションを設定し、保存する</li>
+  <li>Discordに戻り、3で指定したテキストを送信し、アクションが実行されれば成功です。</li>
+</ol>
+<p>また、自動返信には、{args_引数id}と{args_all}以外のカスタムコマンドの変数が使用できます。</p>

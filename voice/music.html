@@ -1,0 +1,126 @@
+<!--
+title: 音楽
+description: 音楽をボイスチャンネルで再生する方法の説明
+published: true
+date: 2026-04-22T05:12:57.707Z
+tags: 音楽, ボイスチャンネル
+editor: ckeditor
+dateCreated: 2026-04-22T02:00:26.429Z
+-->
+
+<h1>音楽</h1>
+<p>音楽をボイスチャンネルで再生することができる機能です。</p>
+<blockquote>
+  <p>音楽機能と音楽クイズは一緒に使用することができません。</p>
+  <p>使用してしまった場合は、<code>!.stop</code>と入力して送信した後に<code>/music-quiz stop</code>と入力て送信することで復旧できます。</p>
+</blockquote>
+<h3>音楽をボイスチャンネルで再生する</h3>
+<p>音楽を再生するには、スラッシュコマンドではなく、Prefixコマンドを使用する必要があります。</p>
+<p>Prefixコマンドは、「!.」で始まるコマンドのことです。</p>
+<p>以下は、音楽をSoundCloudで検索し再生する手順です。</p>
+<ol>
+  <li>まず音楽を再生したいボイスチャンネルに参加します。</li>
+  <li>次に、<code>!.play [検索ワード|Url]</code>と入力し、送信します。</li>
+  <li>再生キューに追加され、再生が開始されます。</li>
+  <li>停止する際は、<code>!.stop</code>と入力し、送信します。</li>
+  <li>音楽が停止され、ボイスチャンネルからBotが退出します。</li>
+</ol>
+<h3>対応音楽サービス</h3>
+<p>音楽再生は以下のサービスに対応しています。</p>
+<ul>
+  <li>SoundCloud（再生対応＆検索対応）</li>
+  <li>Youtube（検索対応）</li>
+  <li>添付ファイル（.mp3, .wav, .ogg, .m4a）</li>
+</ul>
+<h3>ループの設定方法</h3>
+<p>以下は、音楽でループを設定する手順です。</p>
+<ol>
+  <li>まず音楽を再生したいボイスチャンネルに参加します。</li>
+  <li>次に、<code>!.loop [off|track|queue]</code>と入力し、送信します。</li>
+  <li>指定したループが設定されます。</li>
+</ol>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>ループの種類</td>
+        <td>説明</td>
+      </tr>
+      <tr>
+        <td>off</td>
+        <td>ループがoffになります。</td>
+      </tr>
+      <tr>
+        <td>track</td>
+        <td>一曲ループを設定します。</td>
+      </tr>
+      <tr>
+        <td>queue</td>
+        <td>キューループを設定します。</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>コマンド一覧</h3>
+<p>以下は、音楽のコマンド一覧です。</p>
+<figure class="table">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(224, 224, 224);border-right:1px solid rgb(224, 224, 224);border-top:1px solid rgb(224, 224, 224);">
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">コマンド名</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">説明</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">必要な権限</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">!.play</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">音楽をVCで再生します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">なし</td>
+      </tr>
+      <tr>
+        <td>!.skip</td>
+        <td>音楽をスキップします。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>!.stop</td>
+        <td>音楽を停止します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>!.queue</td>
+        <td>キューの一覧を表示します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>!.loop</td>
+        <td>音楽のループ設定を変更します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>!.volume</td>
+        <td>ボリュームを調整します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>!.nowplaying</td>
+        <td>現在再生している曲を表示します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>!.seek</td>
+        <td>再生位置を調整します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>!.shuffle</td>
+        <td>曲をシャッフルします。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>!.qclear</td>
+        <td>キューをクリアします。</td>
+        <td>なし</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

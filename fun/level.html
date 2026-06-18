@@ -1,0 +1,64 @@
+<!--
+title: レベル
+description: レベルを実装する簡単な方法
+published: true
+date: 2026-06-15T08:11:12.189Z
+tags: レベル
+editor: ckeditor
+dateCreated: 2026-06-02T11:05:33.629Z
+-->
+
+<h1>レベル</h1>
+<p>サーバーメンバーを競わせる、レベルシステムを設定することができます。</p>
+<h2>レベルを有効化する</h2>
+<p>レベルは以下のコマンドで有効化できます。</p>
+<p><code>/level settiing true</code></p>
+<h2>レベルアップ時に通知するチャンネルを指定する</h2>
+<p><code>/level channel</code>でレベルアップ時のチャンネルを指定し、</p>
+<p><code>/level message</code>でレベルアップメッセージを指定できます。</p>
+<p>また、レベルアップメッセージは「テキスト」「埋め込み」を指定することができます。</p>
+<h3>レベルアップメッセージで使用可能な変数</h3>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">変数名</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">説明</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">例</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{user}</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">レベルアップした人を代入します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">サメちゃん</td>
+      </tr>
+      <tr>
+        <td>{mention}</td>
+        <td>レベルアップした人をメンションします。</td>
+        <td>@サメちゃん</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{newlevel}</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">レベルアップ後のレベルを代入します。</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">10</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{category}</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">カテゴリを代入します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">テキスト</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>レベルアップ時に追加する報酬ロールを指定する</h2>
+<p><code>/level role</code>で報酬ロールを指定できます。</p>
+<h2>レベルを確認する</h2>
+<p>レベルは以下のコマンドで確認できます。</p>
+<p><code>/level show</code>か、<code>/level card</code>、そして<code>/rank</code>コマンドで確認できます。</p>
+<h2>レベルアップに必要なXPを指定する</h2>
+<p>レベルアップに必要なXPを指定するには、</p>
+<p><code>/level timing</code>で指定できます。</p>
+<h2>レベルのランキングを取得する</h2>
+<p><code>/level ranking</code>でランキングを取得できます。</p>
+<h2>レベルカードをカスタマイズする</h2>
+<p><code>/level card-custom</code>でレベルカードをカスタマイズできます。</p>
+<p>好きな色を指定したり、背景を指定したりすることができます。<br>使用可能な背景は「<a href="https://www.sharkbot.xyz/level/card">ここ</a>」から確認できます。</p>

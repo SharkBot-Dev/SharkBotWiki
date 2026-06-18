@@ -1,0 +1,71 @@
+<!--
+title: AutoMod
+description: AutoModを設定する方法
+published: true
+date: 2026-06-18T06:06:49.257Z
+tags: サーバー管理, automod
+editor: ckeditor
+dateCreated: 2026-06-18T06:06:47.573Z
+-->
+
+<h1>AutoMod</h1>
+<p>AutoMod機能を使用すると、メンバーが不適切なコンテンツを投稿するのを防ぐことができます。</p>
+<h2>AutoModを設定・削除する</h2>
+<p>AutoModは、<code>/automod create</code>コマンドで、設定することができます。</p>
+<p>また、削除は<code>/automod delete</code>コマンドで、行うことができます。</p>
+<p>さらに、AutoModによる処罰ログはコマンド<code>/automod modlog</code>で、設定できます。</p>
+<h2>AutoModの種類一覧</h2>
+<p>SharkBotには、以下のAutoModが存在します。</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>名前</td>
+        <td>説明</td>
+        <td>サンプルテキスト</td>
+      </tr>
+      <tr>
+        <td>招待リンク</td>
+        <td>招待リンクを送信された際に処罰を実行します。</td>
+        <td>discord.gg/test</td>
+      </tr>
+      <tr>
+        <td>Token</td>
+        <td>Discordユーザーや、DiscordBotのTokenが送信された際に処罰します。</td>
+        <td>🤔</td>
+      </tr>
+      <tr>
+        <td>EveryoneとHere</td>
+        <td>全体メンションを送信できなくします。</td>
+        <td>@everyone、@here</td>
+      </tr>
+      <tr>
+        <td>メールアドレス</td>
+        <td>メールアドレスを送信できなくします。</td>
+        <td>test@example.com</td>
+      </tr>
+      <tr>
+        <td>メッセージスパム</td>
+        <td>メッセージをスパムできなくします。</td>
+        <td>🤔</td>
+      </tr>
+      <tr>
+        <td>スラッシュコマンドスパム</td>
+        <td>スラッシュコマンドをスパムできなくします。</td>
+        <td>🤔</td>
+      </tr>
+      <tr>
+        <td>10個以上の絵文字</td>
+        <td>10個以上絵文字を送信できなくします。</td>
+        <td>🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔</td>
+      </tr>
+      <tr>
+        <td>大きいテキスト</td>
+        <td><code># </code>を使用した大きい文字を送信できなくします。</td>
+        <td>
+          <h1>大きい！</h1>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

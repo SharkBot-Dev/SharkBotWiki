@@ -1,0 +1,87 @@
+<!--
+title: Note.com
+description: Note.comの関する連携の説明
+published: true
+date: 2026-04-12T09:23:40.674Z
+tags: note.com, 通知
+editor: ckeditor
+dateCreated: 2026-04-11T22:44:19.708Z
+-->
+
+<h1>Note.com連携</h1>
+<p>Note.com連携は、Note.comにて新しい記事が投稿された際に通知したり、記事を検索したりできます。</p>
+<h3>新しい記事が投稿された際に通知をする</h3>
+<p>以下は新しい記事が投稿された際に通知する機能をセットアップする方法です。</p>
+<ol>
+  <li><code>/sns note add</code> を入力し、ユーザー名を指定してから送信する</li>
+  <li><code>/sns note list</code>を入力し送信します。</li>
+  <li>通知したいユーザーのURLが表示されていれば成功です。</li>
+</ol>
+<blockquote>
+  <p>逆に記事通知を削除する場合は、/sns note removeで削除できます。</p>
+</blockquote>
+<h3>コマンド一覧</h3>
+<p>以下は、Note.com連携のコマンド一覧です。</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>コマンド名</td>
+        <td>説明</td>
+        <td>必要な権限</td>
+      </tr>
+      <tr>
+        <td>/sns note add</td>
+        <td>note.comの通知を登録します。</td>
+        <td>チャンネルの管理, Webhookの管理</td>
+      </tr>
+      <tr>
+        <td>/sns note remove</td>
+        <td>note.comの通知を削除します。</td>
+        <td>チャンネルの管理</td>
+      </tr>
+      <tr>
+        <td>/sns note list</td>
+        <td>登録中のnote.com通知一覧を表示します。</td>
+        <td>チャンネルの管理</td>
+      </tr>
+      <tr>
+        <td>/sns note message</td>
+        <td>通知時に使用するメッセージのテンプレートを指定します。</td>
+        <td>チャンネルの管理</td>
+      </tr>
+      <tr>
+        <td>/search web note</td>
+        <td>Note記事を検索します。</td>
+        <td>なし</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>メッセージに使用できる変数</h3>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>変数名</td>
+        <td>説明</td>
+        <td>例</td>
+      </tr>
+      <tr>
+        <td>{name}</td>
+        <td>記事を投稿した人の名前を代入します。</td>
+        <td>SharkBot公式</td>
+      </tr>
+      <tr>
+        <td>{title}</td>
+        <td>記事のタイトルを代入します。</td>
+        <td>SharkBotについて</td>
+      </tr>
+      <tr>
+        <td>{url}</td>
+        <td>記事のURLを入力します。</td>
+        <td>https://note.com/kasoneko12345/n/abcdefgh</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

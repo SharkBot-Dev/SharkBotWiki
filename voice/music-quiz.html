@@ -1,0 +1,85 @@
+<!--
+title: 音楽クイズ
+description: 音楽クイズを開催するための説明
+published: true
+date: 2026-04-22T05:12:33.697Z
+tags: 音楽, ボイスチャンネル, 音楽クイズ
+editor: ckeditor
+dateCreated: 2026-04-22T04:18:22.223Z
+-->
+
+<h1>音楽クイズ</h1>
+<p>音楽クイズをボイスチャンネルやステージチャンネルで開催することができる機能です。</p>
+<blockquote>
+  <p>音楽機能と音楽クイズは一緒に使用することができません。</p>
+  <p>使用してしまった場合は、<code>!.stop</code>と入力して送信した後に<code>/music-quiz stop</code>と入力て送信することで復旧できます。</p>
+</blockquote>
+<h3>音楽クイズを開催する</h3>
+<p>以下は、音楽クイズを開催するための簡単な方法です。</p>
+<ol>
+  <li><code>/music-quiz add</code>でクイズに出したい今日のタイトルやアーティストを指定します。</li>
+  <li>次に、音楽を流したいボイスチャンネルやステージチャンネルに参加します。</li>
+  <li>今度は、音楽クイズを開催したいチャンネルで、<code>/music-quiz start</code>を実行し、音楽クイズを開始します。</li>
+  <li>音楽が再生されますので、3.のコマンドを実行したチャンネルで曲名を送信します。</li>
+  <li>曲名が当たっていれば1ポイントが追加されます。ポイントを獲得できるのは最初にあてた人のみです。</li>
+  <li>次のクイズがあれば、次のクイズが出てきます。</li>
+  <li>すべてのクイズが終わったらクイズ終了と表示され、<code>/music-quiz ranking</code>でスコアランキングを表示できます。</li>
+</ol>
+<h3>コマンド一覧</h3>
+<p>以下は、音楽クイズに存在するコマンド一覧です。</p>
+<figure class="table">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(224, 224, 224);border-right:1px solid rgb(224, 224, 224);border-top:1px solid rgb(224, 224, 224);">
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">コマンド名</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">説明</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">必要な権限</td>
+      </tr>
+      <tr>
+        <td>/music-quiz start</td>
+        <td>音楽クイズを開始します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>/music-quiz stop</td>
+        <td>音楽クイズを停止して退出します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>/music-quiz skip</td>
+        <td>音楽クイズをスキップして次の曲を再生します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>/music-quiz add</td>
+        <td>クイズの曲リストに曲名やキーワードを追加します。</td>
+        <td>サーバーの管理</td>
+      </tr>
+      <tr>
+        <td>/music-quiz remove</td>
+        <td>クイズの曲リストから曲名やキーワードを削除します。</td>
+        <td>サーバーの管理</td>
+      </tr>
+      <tr>
+        <td>/music-quiz list</td>
+        <td>クイズの曲リストを表示します。</td>
+        <td>サーバーの管理</td>
+      </tr>
+      <tr>
+        <td>/music-quiz score</td>
+        <td>特定のユーザーのスコアを表示します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>/music-quiz ranking</td>
+        <td>現在のランキングを表示します。</td>
+        <td>なし</td>
+      </tr>
+      <tr>
+        <td>/music-quiz reset</td>
+        <td>全員のスコアをリセットします。</td>
+        <td>サーバーの管理</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

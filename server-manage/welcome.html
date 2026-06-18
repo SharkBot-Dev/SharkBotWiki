@@ -1,0 +1,81 @@
+<!--
+title: よろしく＆さようなら
+description: 参加時＆退出時にメッセージを送信したりするための説明
+published: true
+date: 2026-05-06T07:22:52.722Z
+tags: よろしく, さようなら, 参加, 退出
+editor: ckeditor
+dateCreated: 2026-05-06T07:19:03.897Z
+-->
+
+<h1>よろしく＆さようなら</h1>
+<p>よろしく＆さようなら機能を使用すると、参加時＆退出時にメッセージを送信したり、参加時にロールを追加したりすることができます。</p>
+<h2>よろしくメッセージを設定する</h2>
+<p>よろしくメッセージを設定すると、メンバー参加時に指定したメッセージを送信することができます。</p>
+<p>よろしくメッセージは以下の手順で設定できます。</p>
+<ol>
+  <li>よろしくメッセージを送信したいチャンネルで<code>/settings welcome welcome</code>と入力をし、trueを指定してから送信します。</li>
+  <li>メッセージ内容と埋め込みを指定し、送信します。</li>
+  <li>よろしくメッセージが設定されます。</li>
+</ol>
+<blockquote>
+  <p><code>/settings welcome welcome</code>と入力をし、falseを指定すると無効化できます。</p>
+</blockquote>
+<h2>さようならメッセージ</h2>
+<p>さようならメッセージを設定すると、メンバー退出時に指定したメッセージを送信することができます。</p>
+<p>さようならメッセージは以下の手順で設定できます。</p>
+<ol>
+  <li>さようならメッセージを送信したいチャンネルで<code>/settings welcome goodbye</code>と入力をし、trueを指定してから送信します。</li>
+  <li>メッセージ内容と埋め込みを指定し、送信します。</li>
+  <li>さようならメッセージが設定されます。</li>
+</ol>
+<blockquote>
+  <p><code>/settings welcome goodbye</code>と入力をし、falseを指定すると無効化できます。</p>
+</blockquote>
+<h2>使用できる変数</h2>
+<p>よろしくメッセージとさようならメッセージには変数を使用できます。</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">変数名</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">説明</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">例</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{name}</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">参加＆退出した人の名前を代入します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">kametailang0541</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{mention}</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">参加＆退出した人のメンションを代入します。</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">@サメちゃん</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{count}</td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">現在のサーバー人数を代入します。</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">100</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">{guild}</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">現在のサーバー名を代入します。</td>
+        <td style="border-bottom:1px solid rgb(207, 216, 220);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.5rem 0.75rem;">SharkBot Support</td>
+      </tr>
+      <tr>
+        <td>{createdat}</td>
+        <td>参加＆退出した人のアカウント作成日を代入します。</td>
+        <td>2020-10-18 09:30:04.495000+00:00</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>参加時にロールを追加する</h2>
+<p>以下の手順で設定をすると参加時にロールを追加できます。</p>
+<ol>
+  <li><code>/settings role auto-role</code>と入力し、ロールを指定し、送信します</li>
+  <li>参加時にロールが追加されるようになります。</li>
+</ol>
+<blockquote>
+  <p><code>/settings role auto-role</code>で既に指定したロールを指定して送信すると無効化できます。</p>
+</blockquote>
