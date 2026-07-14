@@ -2,7 +2,7 @@
 title: TopGG通知
 description: TopGGでのVote通知の設定方法
 published: true
-date: 2026-06-23T08:18:56.432Z
+date: 2026-06-23T08:18:58.758Z
 tags: topgg, sns
 editor: markdown
 dateCreated: 2026-06-23T08:18:56.432Z

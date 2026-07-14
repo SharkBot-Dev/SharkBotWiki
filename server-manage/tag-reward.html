@@ -1,0 +1,47 @@
+<!--
+title: サーバータグ報酬
+description: 
+published: true
+date: 2026-06-28T08:30:06.918Z
+tags: サーバー管理, サーバータグ, 報酬
+editor: ckeditor
+dateCreated: 2026-06-28T08:30:05.225Z
+-->
+
+<h1>サーバータグ報酬</h1>
+<p>サーバータグ報酬を使用することで、サーバータグを追加した人に報酬を与えることができるようになります。</p>
+<h2>設定方法</h2>
+<p><code>/settings welcome tag</code>コマンドで設定できます。</p>
+<p>タグ名には、自分のサーバーのタグ名を指定してください。</p>
+<p>ロールを指定すれば、報酬ロールを指定できます。</p>
+<p>※自分のサーバー以外のタグ名は、通知されません。</p>
+<h2>無効化方法</h2>
+<p><code>/settings welcome tag</code>コマンドでFalseを指定することで無効化できます。</p>
+<h2>メッセージ変数</h2>
+<p>報酬メッセージの変数には、以下が使用できます。</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>名前</td>
+        <td>説明</td>
+        <td>例</td>
+      </tr>
+      <tr>
+        <td>{name}</td>
+        <td>ユーザーの名前</td>
+        <td>@kametailang0541</td>
+      </tr>
+      <tr>
+        <td>{mention}</td>
+        <td>ユーザーのメンション</td>
+        <td>＠サメちゃん</td>
+      </tr>
+      <tr>
+        <td>{createdat}</td>
+        <td>アカウント作成日</td>
+        <td>🤔</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

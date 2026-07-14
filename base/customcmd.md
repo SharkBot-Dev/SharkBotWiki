@@ -2,7 +2,7 @@
 title: カスタムコマンド（Tag）
 description: SharkBotにはTagという名前のカスタムコマンドがあります。
 published: true
-date: 2026-07-13T08:59:40.133Z
+date: 2026-07-13T08:59:41.977Z
 tags: tag, カスタムコマンド
 editor: markdown
 dateCreated: 2026-05-05T02:58:03.756Z

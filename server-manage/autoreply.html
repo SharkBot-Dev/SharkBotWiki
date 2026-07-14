@@ -1,0 +1,90 @@
+<!--
+title: 自動返信
+description: 自動返信を実装する方法
+published: true
+date: 2026-06-30T00:57:49.990Z
+tags: サーバー管理, 自動返信
+editor: ckeditor
+dateCreated: 2026-06-30T00:57:48.392Z
+-->
+
+<h1>自動返信</h1>
+<p>自動返信機能を使用すると、サーバーのお問い合わせなどを自動化でき、サーバーをより強化できます。</p>
+<h2>自動返信を作成する</h2>
+<p>自動返信は、以下のコマンドで作成できます。</p>
+<p>一行のみの場合: <code>/autoreply create</code></p>
+<p>複数行の場合: <code>/autoreply form</code></p>
+<p>「条件」、「反応するワード」が含まれたメッセージが送信されると、自動で指定したメッセージが返信されます。</p>
+<h2>自動返信を削除する</h2>
+<p>自動返信は以下のコマンドで削除できます。</p>
+<p><code>/autoreply delete</code></p>
+<p>※「条件」、「反応するワード」などを指定して削除する必要があります。</p>
+<h2>自動返信をリスト化する</h2>
+<p>自動返信は以下のコマンドでリスト化できます。</p>
+<p><code>/autoreply list</code></p>
+<h2>自動返信で使える変数</h2>
+<p>自動返信のメッセージ内に以下の文字列を入力すると、自動で置き換わります。</p>
+<figure class="table">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(224, 224, 224);border-right:1px solid rgb(224, 224, 224);border-top:1px solid rgb(224, 224, 224);">
+    <thead>
+      <tr>
+        <th style="background-color:rgb(245, 245, 245);border-bottom:2px solid rgb(158, 158, 158);padding:0.75rem;">構文</th>
+        <th style="background-color:rgb(245, 245, 245);border-bottom:2px solid rgb(158, 158, 158);padding:0.75rem;">置換される内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者の表示名（ニックネーム）</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author_id}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者のユーザーID</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author_avatar}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者のアバター (URLではない)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author_avatar_url}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者のアバターURL</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author_mention}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者のメンション</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{guild_name}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバー名</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{guild_icon}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバーアイコン (URLではない)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{guild_icon_url}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバーアイコンURL</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{guild_id}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバーID</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{count}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバーの現在のメンバー数</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{channel_name}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">チャンネル名</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{channel_id}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">チャンネルID</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:medium none currentcolor;border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{message_id}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:medium none currentcolor;border-right:medium none currentcolor;padding:0.75rem;">コマンドを呼び出したときのメッセージID</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
