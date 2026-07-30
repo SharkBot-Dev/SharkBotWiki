@@ -1,0 +1,81 @@
+<!--
+title: 認証パネル
+description: 認証パネルを設置する方法など
+published: true
+date: 2026-07-30T06:55:04.289Z
+tags: サーバー管理, 認証パネル, メンバー
+editor: ckeditor
+dateCreated: 2026-07-30T06:55:04.289Z
+-->
+
+<h1>認証パネル</h1>
+<p>認証パネル機能を使用すると、メンバーがルールに同意したことを確認したり、メンバーがロボットではないことを確認したりできます。</p>
+<h2>認証パネルの種類</h2>
+<p>認証パネルの種類を把握することでサーバーに最適な認証パネルを選択できるようになります。</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>名称</td>
+        <td>説明</td>
+        <td>設置コマンド</td>
+        <td>どんなときに採用するべきか</td>
+      </tr>
+      <tr>
+        <td>ワンクリック認証</td>
+        <td>ボタンを押すと認証が完了するパネルです。</td>
+        <td><code>/panel auth auth</code></td>
+        <td>ルールに同意したかを確認したいとき</td>
+      </tr>
+      <tr>
+        <td>計算認証</td>
+        <td>簡単な計算が求められる認証パネルです。</td>
+        <td><code>/panel auth abs-auth</code></td>
+        <td>ロボットかどうかを簡単に確認したいとき</td>
+      </tr>
+      <tr>
+        <td>矢印認証</td>
+        <td>矢印がどの方向を向いているかを入力させる認証です。</td>
+        <td><code>/panel auth arrow-auth</code></td>
+        <td>ロボットかどうかを簡単に確認したいとき</td>
+      </tr>
+      <tr>
+        <td>Web認証</td>
+        <td>Webにアクセスし、キャプチャをとかせる認証です。<br>また、参加しているサーバーの検証を行えます。</td>
+        <td><code>/panel auth webauth</code></td>
+        <td>ロボットではないことを本格的に確認したいとき<br>メンバーの参加しているサーバーを検証したいとき</td>
+      </tr>
+      <tr>
+        <td>2fa認証</td>
+        <td>メンバーがDiscordアカウントの二段階認証を完了させているかを検証できます。</td>
+        <td><code>/panel auth 2fa</code></td>
+        <td>二段階認証が必須のサーバーで二段階しているかを確認したいとき</td>
+      </tr>
+      <tr>
+        <td>画像認証</td>
+        <td>画像にかかれている文字を入力させる認証です。</td>
+        <td><code>/panel auth image</code></td>
+        <td>ロボットではないかを簡単に確認したいとき</td>
+      </tr>
+      <tr>
+        <td>ガイドライン認証</td>
+        <td>ルールに同意しているかだけを確認する認証です。</td>
+        <td><code>/panel auth guideline</code></td>
+        <td>ルールに同意しているかだけを確認したいとき</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>認証時に必要なロールを指定する</h2>
+<p><code>/panel auth auth-reqrole</code>で必要なロールを指定でき、そのロールがないと認証できなくします。</p>
+<h2>Web認証時のログを取る方法</h2>
+<p><code>/panel auth log</code>でログチャンネルを指定でき、認証に成功したかどうかを確認できるようになります。</p>
+<h2>Web認証時に参加していてはいけないサーバーを設定する方法</h2>
+<p><code>/moderation serverban</code>でサーバーIDを入力し設定できます。</p>
+<p>解除は<code>/moderation serverunban</code>でサーバーIDを入力し解除できます。</p>
+<h2>Web認証時の背景を指定する方法 (👑<a href="/premium">メンバーシップ</a>が必要)</h2>
+<p><a href="/server-manage/auth">ダッシュボード</a>にログインし、サーバー選択後、「✅認証」項目の「Web認証時の背景」に<a href="https://imgur.com/upload">imgurでアップロード</a>した画像URLを入力することで指定できます。</p>
+<p>詳しい画像URLの入手方法は以下の項目で確認してください。</p>
+<h2>Imgurに画像をアップロードし、URLを取得する方法</h2>
+<p><a href="https://imgur.com/upload">Imgurに画像をアップロード</a>し、アップロードされた画像を右クリック後、新しいタブで開くをクリックすると画像が開きます。</p>
+<p>その画像が表示されたページのURL（https://i.imgur.com/から始まるURL）をコピーすればURLを取得できます。</p>
