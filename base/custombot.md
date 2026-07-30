@@ -2,7 +2,7 @@
 title: カスタムBot
 description: Botのアバターや、バナー、自己紹介をカスタマイズしましょう。
 published: true
-date: 2026-07-13T08:03:37.684Z
+date: 2026-07-30T07:02:04.879Z
 tags: プレミアム, 有料, メンバーシップ, カスタムbot
 editor: markdown
 dateCreated: 2026-07-12T07:25:22.544Z
@@ -11,7 +11,7 @@ dateCreated: 2026-07-12T07:25:22.544Z
 # カスタムBot
 カスタムBot機能で、Botのアバターやバナー、自己紹介をカスタマイズできます。
 
-## 完全なカスタムBot ([※メンバーシップが必要](https://wiki.sharkbot.xyz/ja/premium))
+## 完全なカスタムBot ([👑メンバーシップが必要](https://wiki.sharkbot.xyz/ja/premium))
 完全なカスタムBotは、アバターとバナー、自己紹介を変更できます。
 次のコマンドでカスタマイズできます。: `/bot custom`
 > r18やDiscordの利用規約に違反したカスタマイズを行った場合、
