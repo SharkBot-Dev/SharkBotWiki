@@ -2,7 +2,7 @@
 title: カスタムコマンド（Tag）
 description: SharkBotにはTagという名前のカスタムコマンドがあります。
 published: true
-date: 2026-07-16T00:38:58.169Z
+date: 2026-08-15T06:25:04.429Z
 tags: tag, カスタムコマンド
 editor: markdown
 dateCreated: 2026-05-05T02:58:03.756Z
@@ -168,11 +168,6 @@ dateCreated: 2026-05-05T02:58:03.756Z
 * **埋め込みの追加**: {embed:コード}
 		* 埋め込みをタグメッセージに追加します。最大10個まで追加できます。
 例: `{embed:title=タイトル,description=説明,image=画像url,thumbnail=サムネイル画像url,color=数字の色(16711680),footer=フッターテキスト,footer_icon=フッターアイコンURL,author=ユーザーテキスト,author_icon=ユーザーアイコンURL}`
-
-### コンポーネント（プレミアム版専用）
-* **ボタンの追加**: {button:コード}
-		* ボタンをタグメッセージに追加します。追加できる数には制限があります。
-例: `{button:label=ボタンラベル,custom_id=カスタムID,style=ボタンのスタイル(例:danger),url=ボタンのURL(styleや、custom_idと一緒に指定できません。,emoji=絵文字)}`
 
 ## Tagスクリプト記述例
 
