@@ -2,7 +2,7 @@
 title: 実績
 description: サーバーメンバーの達成できる実績を作成する方法
 published: true
-date: 2026-07-13T09:20:58.075Z
+date: 2026-08-21T07:38:16.065Z
 tags: 実績, 楽しい
 editor: ckeditor
 dateCreated: 2026-07-13T09:20:56.410Z
@@ -44,3 +44,63 @@ dateCreated: 2026-07-13T09:20:56.410Z
 <p>達成時のメッセージは<code>/achievement channel</code>で指定できます。</p>
 <h2>実績を削除する</h2>
 <p>実績を削除するに、<code>/achievement delete 実績名:（実績名）</code>で削除できます。</p>
+<h2>実績達成時のメッセージを指定する</h2>
+<p>達成時のメッセージを指定するには、<code>/achievement message</code>で指定できます。</p>
+<h3>実績達成時のメッセージで使用できる変数一覧</h3>
+<p>メッセージ内に書くことで使用できます。</p>
+<figure class="table">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(224, 224, 224);border-right:1px solid rgb(224, 224, 224);border-top:1px solid rgb(224, 224, 224);">
+    <thead>
+      <tr>
+        <th style="background-color:rgb(245, 245, 245);border-bottom:2px solid rgb(158, 158, 158);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><strong>構文</strong></th>
+        <th style="background-color:rgb(245, 245, 245);border-bottom:2px solid rgb(158, 158, 158);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(207, 216, 220);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><strong>置換される内容</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{author}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">実行者の表示名（ニックネーム）</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{author_id}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">実行者のユーザーID</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{author_avatar}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">実行者のアバター (URLではない)</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{author_avatar_url}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">実行者のアバターURL</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{author_mention}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">実行者のメンション</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{guild_name}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">サーバー名</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{guild_icon}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">サーバーアイコン (URLではない)</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{guild_icon_url}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">サーバーアイコンURL</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{guild_id}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">サーバーID</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{count}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">サーバーの現在のメンバー数</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:1px solid rgb(245, 245, 245);border-top:1px solid rgb(207, 216, 220);padding:0.75rem;"><code>{achievement_name}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(207, 216, 220);border-right:medium none currentcolor;border-top:1px solid rgb(207, 216, 220);padding:0.75rem;">実績を達成した実績の名前</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
