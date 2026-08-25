@@ -2,7 +2,7 @@
 title: サーバー内経済
 description: サーバー内専用の経済を作成する方法
 published: true
-date: 2026-08-25T23:04:13.211Z
+date: 2026-08-25T23:05:52.089Z
 tags: 経済, 楽しい, ゲーム, サーバー内経済
 editor: ckeditor
 dateCreated: 2026-07-30T07:51:22.529Z
@@ -206,10 +206,6 @@ dateCreated: 2026-07-30T07:51:22.529Z
     </thead>
     <tbody>
       <tr>
-        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{args}</code></td>
-        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">コマンド実行時に渡された引数（メッセージ全体）</td>
-      </tr>
-      <tr>
         <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author}</code></td>
         <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者の表示名（ニックネーム）</td>
       </tr>
@@ -258,8 +254,12 @@ dateCreated: 2026-07-30T07:51:22.529Z
         <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">チャンネルID</td>
       </tr>
       <tr>
-        <td style="background-color:rgb(250, 250, 250);border-bottom:medium none currentcolor;border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{message_id}</code></td>
-        <td style="background-color:rgb(245, 245, 245);border-bottom:medium none currentcolor;border-right:medium none currentcolor;padding:0.75rem;">コマンドを呼び出したときのメッセージID</td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:medium none currentcolor;border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{coins}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:medium none currentcolor;border-right:medium none currentcolor;padding:0.75rem;">追加、剥奪したコイン数</td>
+      </tr>
+      <tr>
+        <td><code>{action_name}</code></td>
+        <td>行動の名称（例: 追加、剥奪）</td>
       </tr>
     </tbody>
   </table>
