@@ -2,7 +2,7 @@
 title: サーバー内経済
 description: サーバー内専用の経済を作成する方法
 published: true
-date: 2026-07-30T07:55:45.984Z
+date: 2026-08-25T23:04:13.211Z
 tags: 経済, 楽しい, ゲーム, サーバー内経済
 editor: ckeditor
 dateCreated: 2026-07-30T07:51:22.529Z
@@ -174,6 +174,92 @@ dateCreated: 2026-07-30T07:51:22.529Z
       <tr>
         <td><code>/economy gacha panel</code></td>
         <td>ガチャを引けるパネルを送信します。</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>カスタム経済コマンドを作成する</h2>
+<p>以下はカスタム経済コマンドを作成する方法です。</p>
+<p>カスタム経済コマンドを使用すると、独自の収入、支出コマンドを作成できます。</p>
+<ol>
+  <li>ダッシュボードにアクセスする</li>
+  <li>サーバーを選択する</li>
+  <li>「🪙サーバー内経済」を選択し、下にスクロールする</li>
+  <li>「カスタムコマンド設定に移動する」を押す</li>
+  <li>コマンド名、説明を入力する</li>
+  <li>結果テキストに結果を入力する。ここに入力したテキストが返ります。</li>
+  <li>実行する処理で、追加するコイン、剥奪するコインなどを指定できます。</li>
+  <li>クールダウンを24時間まで指定する。（なしの場合は入力しない）</li>
+  <li>下のポップアップから保存する</li>
+  <li>コマンドが作成される</li>
+  <li><code>/economy コマンド名 </code>と入力し、実行できることを確認する</li>
+</ol>
+<h2>カスタム経済コマンドに存在する変数</h2>
+<p>実行時の状況に応じて自動的に置換されます。</p>
+<figure class="table" style="width:1528.93px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(224, 224, 224);border-left:1px solid rgb(224, 224, 224);border-right:1px solid rgb(224, 224, 224);border-top:1px solid rgb(224, 224, 224);">
+    <thead>
+      <tr>
+        <th style="background-color:rgb(245, 245, 245);border-bottom:2px solid rgb(158, 158, 158);padding:0.75rem;">構文</th>
+        <th style="background-color:rgb(245, 245, 245);border-bottom:2px solid rgb(158, 158, 158);padding:0.75rem;">置換される内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{args}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">コマンド実行時に渡された引数（メッセージ全体）</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者の表示名（ニックネーム）</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author_id}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者のユーザーID</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author_avatar}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者のアバター (URLではない)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author_avatar_url}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者のアバターURL</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{author_mention}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">実行者のメンション</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{guild_name}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバー名</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{guild_icon}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバーアイコン (URLではない)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{guild_icon_url}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバーアイコンURL</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{guild_id}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバーID</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{count}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">サーバーの現在のメンバー数</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{channel_name}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">チャンネル名</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid rgb(224, 224, 224);border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{channel_id}</code></td>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:1px solid rgb(224, 224, 224);border-right:medium none currentcolor;padding:0.75rem;">チャンネルID</td>
+      </tr>
+      <tr>
+        <td style="background-color:rgb(250, 250, 250);border-bottom:medium none currentcolor;border-right:1px solid rgb(245, 245, 245);padding:0.75rem;"><code>{message_id}</code></td>
+        <td style="background-color:rgb(245, 245, 245);border-bottom:medium none currentcolor;border-right:medium none currentcolor;padding:0.75rem;">コマンドを呼び出したときのメッセージID</td>
       </tr>
     </tbody>
   </table>
