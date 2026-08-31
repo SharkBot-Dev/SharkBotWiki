@@ -2,7 +2,7 @@
 title: 音楽クイズ
 description: 音楽クイズを開催するための説明
 published: true
-date: 2026-08-31T07:06:49.583Z
+date: 2026-08-31T08:38:41.520Z
 tags: 音楽, ボイスチャンネル, 音楽クイズ
 editor: ckeditor
 dateCreated: 2026-04-22T04:18:22.223Z
@@ -32,6 +32,8 @@ dateCreated: 2026-04-22T04:18:22.223Z
 </ul>
 <h3>音楽クイズのランキングを表示する</h3>
 <p><code>/music-quiz ranking</code>で表示できます。</p>
+<h3>音楽クイズの曲リストにメンバーでも追加できるようにする</h3>
+<p><code>/music-quiz master</code>でeveryoneロールを指定すると、すべての人が追加できるようになります。</p>
 <h3>コマンド一覧</h3>
 <p>以下は、音楽クイズに存在するコマンド一覧です。</p>
 <figure class="table">
@@ -60,17 +62,22 @@ dateCreated: 2026-04-22T04:18:22.223Z
       <tr>
         <td>/music-quiz add</td>
         <td>クイズの曲リストに曲名やキーワードを追加します。</td>
-        <td>サーバーの管理</td>
+        <td>サーバーの管理、もしくは音楽マスターロール</td>
       </tr>
       <tr>
         <td>/music-quiz remove</td>
         <td>クイズの曲リストから曲名やキーワードを削除します。</td>
-        <td>サーバーの管理</td>
+        <td>サーバーの管理、もしくは音楽マスターロール</td>
+      </tr>
+      <tr>
+        <td>/music-quiz clear&nbsp;</td>
+        <td>クイズの曲リストをまっさらにします。</td>
+        <td>サーバーの管理、もしくは音楽マスターロール</td>
       </tr>
       <tr>
         <td>/music-quiz list</td>
         <td>クイズの曲リストを表示します。</td>
-        <td>サーバーの管理</td>
+        <td>サーバーの管理、もしくは音楽マスターロール</td>
       </tr>
       <tr>
         <td>/music-quiz score</td>
@@ -85,6 +92,11 @@ dateCreated: 2026-04-22T04:18:22.223Z
       <tr>
         <td>/music-quiz reset</td>
         <td>全員のスコアをリセットします。</td>
+        <td>サーバーの管理</td>
+      </tr>
+      <tr>
+        <td>/music-quiz master</td>
+        <td>音楽クイズのマスターロールを指定します。</td>
         <td>サーバーの管理</td>
       </tr>
     </tbody>
