@@ -2,7 +2,7 @@
 title: サブBotの埋め込み作成
 description: サブBotを登録している場合に埋め込みを送信させることができます。
 published: true
-date: 2026-11-04T09:30:41.555Z
+date: 2026-11-04T09:32:33.366Z
 tags: 埋め込み, ツール, サブbot
 editor: markdown
 dateCreated: 2026-11-04T09:30:41.555Z
